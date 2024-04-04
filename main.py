@@ -84,7 +84,7 @@ for optimizer_name, loss_values in losses.items():
 plt.xlabel('Epochs')
 plt.ylabel('Training Loss')
 plt.title('Training Loss Curves')
-plt.legend()
+plt.legend() # Show legend
 
 plt.subplot(1, 2, 2)
 for optimizer_name, accuracy_values in accuracies.items():
