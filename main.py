@@ -107,8 +107,8 @@ with torch.no_grad():
         inputs, labels = inputs.to(device), labels.to(device)
         outputs = model(inputs)
         _, predicted = outputs.topk(5, 1, True, True)
-        total += labels.size(0)
+        total += #removed labels.size(0)
         top5_correct += predicted.eq(labels.view(-1, 1).expand_as(predicted)).sum().item()
 
-top5_accuracy = 100 * top5_correct / total
-print(f"Final Top-5 Test Accuracy: {top5_accuracy:.2f}%")
+top5_accuracy = 100 * top5_correct / total # Calculate top-5 accuracy
+print(f"Final Top-5 Test Accuracy: {top5_accuracy:.2f}%") # Print top-5 accuracy
