@@ -81,10 +81,10 @@ plt.figure(figsize=(10, 5))
 plt.subplot(1, 2, 1)
 for optimizer_name, loss_values in losses.items():
     plt.plot(range(1, epochs + 1), loss_values, label=optimizer_name)
-plt.xlabel('Epochs')
-plt.ylabel('Training Loss')
-plt.title('Training Loss Curves')
-plt.legend() # Show legend
+plt.xlabel('Epochs') # Set x-axis label
+plt.ylabel('Training Loss') # Set y-axis label
+plt.title('Training Loss Curves') # Set title
+plt.legend() # show legend
 
 plt.subplot(1, 2, 2)
 for optimizer_name, accuracy_values in accuracies.items():
